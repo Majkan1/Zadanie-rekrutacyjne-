@@ -19,7 +19,7 @@ module.exports = (env, argv) => {
 
     module: {
       rules: [
-        { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
+        { test: /\.jsx?$/, exclude: /node_modules/, use: {loader:'babel-loader',options:{envName:argv.mode}}},
 
         {
           test: /\.s[ac]ss$/,
