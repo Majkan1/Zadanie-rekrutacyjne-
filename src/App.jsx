@@ -1,11 +1,11 @@
 import Header from "./components/Header/Header";
-import Features from "./components/Features/Features";
+import Hero from "./components/Hero/Hero";
 export default function App() {
   return (
     <>
       <Header/>
       <main>
-        <Features/>
+        <Hero/>
       </main>
     </>
   );
