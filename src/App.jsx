@@ -1,10 +1,11 @@
-import Logo from './images/logo-bookmark.svg';
+import Header from "./components/Header/Header";
 
 export default function App() {
   return (
-    <main className="test">
-      <Logo />
-      <h1 className="test__title">Webpack działa</h1>
-    </main>
+    <>
+      <main>
+        <Header/>
+      </main>
+    </>
   );
 }
