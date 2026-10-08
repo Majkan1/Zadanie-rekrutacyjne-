@@ -1,0 +1,24 @@
+@use '../../styles/abstracts' as *;
+
+.Photo1{
+    position: relative;
+    left:27px;
+    width:320px;
+    z-index: 1;
+}
+
+.blue{
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    background-color: $color-primary;
+    right: 0px;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 48%;
+    bottom: 0px;
+    z-index: 0;
+}
+
+.container{
+    position:relative;
+}
