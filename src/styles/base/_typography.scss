@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  color: $color-text-muted;
+}
+
+h1,
+h2,
+h3 {
+  color: $color-dark;
+  font-weight: $font-weight-medium;
+}
