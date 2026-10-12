@@ -2,9 +2,10 @@
 
 .Photo1{
     position: relative;
-    left:27px;
+    left:10px;
     width:320px;
     z-index: 1;
+    margin-top: 60px;
 }
 
 .blue{
@@ -15,10 +16,44 @@
     right: 0px;
     border-top-left-radius: 40%;
     border-bottom-left-radius: 48%;
-    bottom: 0px;
+    top: 52px;
     z-index: 0;
 }
 
 .container{
     position:relative;
+}
+
+.button--chrome{
+    background-color: $color-primary;
+}
+
+.h1{
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+    line-height: 25px;
+}
+
+.buttons{
+    display: flex;
+    padding: 30px 20px;
+    gap:30px;
+}
+
+.button--chrome{
+    background-color: $color-primary;
+    padding: 15px 5px;
+    color:$color-white;
+    border:none;
+    border-radius: 7%;
+}
+
+.button--firefox{
+    background-color:$color-white;
+    padding: 15px 5px;
+    color:$color-text-muted;
+    border: none;
 }

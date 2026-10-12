@@ -30,7 +30,24 @@ module.exports = (env, argv) => {
           ],
         },
 
-        { test: /\.svg$/, use: ['@svgr/webpack'] },
+        {
+          test: /\.svg$/,
+          use: {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: [
+                  {
+                    name: 'preset-default',
+                    params: { overrides: { removeViewBox: false } },
+                  },
+                  'removeDimensions',
+                  'prefixIds',
+                ],
+              },
+            },
+          },
+        },
 
         { test: /\.(png|jpe?g|webp)$/, type: 'asset/resource' },
       ],
