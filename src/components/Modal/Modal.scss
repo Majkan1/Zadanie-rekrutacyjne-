@@ -1,0 +1,107 @@
+@use '../../styles/abstracts' as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  background-color: hsla(229, 31%, 21%, 0.8);
+}
+
+.modal__box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 56px 24px 32px;
+  border-radius: 10px;
+  background-color: $color-white;
+  text-align: center;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto auto auto 1fr;
+    grid-template-areas:
+      'image .'
+      'image title'
+      'image text'
+      'image button'
+      'image .';
+    column-gap: 48px;
+    max-width: 960px;
+    padding: 56px 48px;
+    text-align: left;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.modal__close svg {
+  display: block;
+  width: 16px;
+}
+
+.modal__close path {
+  fill: $color-dark;
+}
+
+.modal__close:hover path {
+  fill: $color-accent;
+}
+
+.modal__image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+
+  @include desktop {
+    grid-area: image;
+    max-width: 100%;
+  }
+}
+
+.modal__title {
+  margin-top: 32px;
+  font-size: 24px;
+
+  @include desktop {
+    grid-area: title;
+    margin-top: 0;
+    font-size: 32px;
+  }
+}
+
+.modal__text {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 25px;
+
+  @include desktop {
+    grid-area: text;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.modal__button {
+  @include button-primary;
+  margin-top: 32px;
+  padding: 14px 24px;
+
+  @include desktop {
+    grid-area: button;
+    justify-self: start;
+  }
+}
