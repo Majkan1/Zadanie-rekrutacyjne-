@@ -3,6 +3,11 @@
 .Features__head-title {
   margin-top: 140px;
   font-size: 24px;
+
+  @include desktop {
+    margin-top: 110px;
+    font-size: 32px;
+  }
 }
 
 .Features__p {
@@ -11,6 +16,14 @@
   font-size: 15px;
   margin-top: 16px;
   padding: 0 32px;
+
+  @include desktop {
+    max-width: 540px;
+    margin: 24px auto 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .Features--choises {
@@ -20,6 +33,15 @@
   margin-top: 50px;
   padding: 0 32px;
   line-height: 60px;
+
+  @include desktop {
+    flex-direction: row;
+    max-width: 730px;
+    margin: 64px auto 0;
+    padding: 0;
+    border-bottom: 1px solid $color-line;
+    line-height: normal;
+  }
 }
 
 .Features--bookmarking,
@@ -30,10 +52,30 @@
   border-top: 1px solid $color-line;
   color: $color-text-muted;
   font-size: 16px;
+
+  @include desktop {
+    flex: 1;
+    margin-bottom: -1px;
+    background-color: transparent;
+    padding: 24px 0 26px;
+    border-top: none;
+    border-bottom: 4px solid transparent;
+    font-size: 17px;
+  }
 }
 
 .Features--sharing {
   border-bottom: 1px solid $color-line;
+
+  @include desktop {
+    border-bottom: 4px solid transparent;
+  }
+}
+
+.Features--bookmarking:hover,
+.Features--searching:hover,
+.Features--sharing:hover {
+  color: $color-accent;
 }
 
 .Features--bookmarking:focus,
@@ -52,18 +94,50 @@
 .Features--choices {
   margin-top: 60px;
   position: relative;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: minmax(0, 536px) minmax(0, 445px);
+    grid-template-rows: 1fr auto auto auto 1fr;
+    grid-template-areas:
+      'image .'
+      'image title'
+      'image text'
+      'image button'
+      'image .';
+    justify-content: space-between;
+    column-gap: 40px;
+    margin-top: 72px;
+    padding: 0 max(32px, calc((100% - 1110px) / 2));
+  }
 }
 
 .tab--h1 {
   margin-top: 96px;
   margin-bottom: 20px;
   font-size: 24px;
+
+  @include desktop {
+    grid-area: title;
+    margin: 0;
+    font-size: 32px;
+    text-align: left;
+  }
 }
 
 .Features--text {
   padding: 0 32px;
   font-size: 15px;
   line-height: 25px;
+
+  @include desktop {
+    grid-area: text;
+    margin-top: 24px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+  }
 }
 
 .under-the-Image {
@@ -75,6 +149,20 @@
   border-bottom-right-radius: 100px;
   top: 35px;
   z-index: 0;
+
+  @include desktop {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-area: image;
+    align-self: start;
+    width: auto;
+    height: 352px;
+    margin-top: 83px;
+    margin-right: 75px;
+    margin-left: -50vw;
+    border-bottom-right-radius: 200px;
+  }
 }
 
 .Features__Active-Image {
@@ -83,4 +171,24 @@
   width: 311px;
   margin: 0 auto;
   z-index: 1;
+
+  @include desktop {
+    grid-area: image;
+    align-self: start;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.Features__button {
+  display: none;
+
+  @include desktop {
+    @include button-primary;
+    display: block;
+    grid-area: button;
+    justify-self: start;
+    margin-top: 32px;
+    padding: 14px 24px;
+  }
 }
