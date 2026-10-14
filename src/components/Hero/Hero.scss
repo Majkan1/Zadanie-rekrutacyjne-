@@ -2,21 +2,20 @@
 
 .Photo1{
     position: relative;
-    left:10px;
-    width:320px;
+    display: block;
+    width:311px;
+    margin: 60px auto 0;
     z-index: 1;
-    margin-top: 60px;
 }
 
 .blue{
     position: absolute;
-    width: 300px;
-    height: 180px;
+    width: 78%;
+    height: 221px;
     background-color: $color-primary;
     right: 0px;
-    border-top-left-radius: 40%;
-    border-bottom-left-radius: 48%;
-    top: 52px;
+    border-bottom-left-radius: 100px;
+    top: 40px;
     z-index: 0;
 }
 
@@ -24,36 +23,47 @@
     position:relative;
 }
 
-.button--chrome{
-    background-color: $color-primary;
-}
-
 .h1{
     text-align: center;
+    margin-top: 96px;
+    padding: 0 32px;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 .text{
     text-align: center;
     line-height: 25px;
+    font-size: 15px;
+    margin-top: 16px;
+    padding: 0 32px;
 }
 
 .buttons{
     display: flex;
-    padding: 30px 20px;
-    gap:30px;
+    justify-content: center;
+    padding: 32px 32px 0;
+    gap:14px;
+}
+
+.button--chrome,
+.button--firefox{
+    flex: 1;
+    max-width: 160px;
+    padding: 15px 5px;
+    border:none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    box-shadow: $shadow-blue;
 }
 
 .button--chrome{
     background-color: $color-primary;
-    padding: 15px 5px;
     color:$color-white;
-    border:none;
-    border-radius: 7%;
 }
 
 .button--firefox{
-    background-color:$color-white;
-    padding: 15px 5px;
-    color:$color-text-muted;
-    border: none;
+    background-color:$color-light;
+    color:$color-dark;
 }
