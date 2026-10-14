@@ -2,18 +2,164 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32px;
   margin-top: 40px;
   margin-bottom: 30px;
+  padding: 0 32px;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    margin-top: 44px;
+    padding: 0 max(32px, (100% - 1110px) / 2);
+  }
 }
 
-.hamburger {
-  width: 18px;
-  height: auto;
-}
-
-.logo {
+.header__logo {
   width: 148px;
+}
+
+.header__toggle {
+  position: relative;
+  z-index: 1;
+  border: none;
+  background-color: transparent;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.header__toggle svg {
+  display: block;
+  width: 18px;
+}
+
+.header__nav {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.header__links {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+.header__link {
+  color: $color-dark;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header__link:hover {
+  color: $color-accent;
+}
+
+.header__login {
+  display: block;
+  padding: 10px 32px;
+  border: 2px solid $color-accent;
+  border-radius: 5px;
+  background-color: $color-accent;
+  color: $color-white;
+  font-size: 13px;
+  font-weight: $font-weight-medium;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 8px -4px hsla(0, 94%, 66%, 0.25);
+}
+
+.header__login:hover {
+  background-color: $color-white;
+  color: $color-accent;
+}
+
+.header__socials {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header--open {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    align-content: flex-start;
+    margin: 0;
+    padding: 40px 32px;
+    background-color: hsla(229, 31%, 21%, 0.95);
+  }
+
+  .header--open .header__logo path,
+  .header--open .header__logo circle {
+    fill: $color-white;
+  }
+
+  .header--open .header__logo circle + path {
+    fill: $color-dark;
+  }
+
+  .header--open .header__nav {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .header--open .header__links li {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+  }
+
+  .header--open .header__links li:last-child {
+    border: none;
+    margin-top: 24px;
+  }
+
+  .header--open .header__link {
+    display: block;
+    padding: 20px 0;
+    color: $color-white;
+    font-size: 20px;
+    letter-spacing: 2.3px;
+    text-align: center;
+  }
+
+  .header--open .header__links li:nth-child(3) {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+  }
+
+  .header--open .header__login {
+    padding: 12px;
+    border-color: $color-white;
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .header--open .header__login:hover {
+    background-color: $color-white;
+    color: $color-dark;
+  }
+
+  .header--open .header__socials {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .header--open .header__socials svg {
+    display: block;
+    width: 24px;
+  }
 }
