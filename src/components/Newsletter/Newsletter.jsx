@@ -13,7 +13,8 @@ export default function Newsletter() {
       setNumber((prev) => Math.max(0, prev - 175));
     }, 100);
     const stop = setTimeout(() => {
-      clearInterval(id);
+    clearInterval(id);
+    setNumber(0);
     }, 20000);
     return () => {
       clearInterval(id);
