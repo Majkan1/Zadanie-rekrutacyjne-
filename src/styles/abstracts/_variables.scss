@@ -3,6 +3,10 @@ $color-accent: hsl(0, 94%, 66%);
 $color-text-muted: hsl(229, 8%, 60%); 
 $color-dark: hsl(229, 31%, 21%); 
 $color-white: hsl(0, 0%, 100%);
+$color-light: hsl(0, 0%, 97%);
+$color-line: hsla(229, 8%, 60%, 0.25);
+$shadow-blue: 0 8px 8px -4px hsla(231, 69%, 60%, 0.25);
+$shadow-card: 0 10px 20px -5px hsla(231, 69%, 60%, 0.2);
 
 $font-family: 'Rubik', sans-serif;
 $font-size-base: 18px;

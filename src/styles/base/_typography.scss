@@ -5,6 +5,7 @@ body {
   font-size: $font-size-base;
   font-weight: $font-weight-regular;
   color: $color-text-muted;
+  overflow-x: hidden;
 }
 
 h1,
