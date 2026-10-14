@@ -9,12 +9,12 @@ export default function Download() {
       <div className="Download__start">
         <h3 className="Download__h1">Download the extension</h3>
         <p>
-          We'got more browsers in the pipeline. Please do let us know if you're
-          got a favourite you'd like us to proritize
+          We've got more browsers in the pipeline. Please do let us know if
+          you've got a favourite you'd like us to prioritize.
         </p>
       </div>
       <div className="Download__cards">
-        <div className="Download__card downolad--div">
+        <div className="Download__card">
           <Chrome className="Download__logo" />
           <h3 className="Download__title">Add to Chrome</h3>
           <h6 className="Download__version">Minimum version 62</h6>

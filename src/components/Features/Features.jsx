@@ -25,8 +25,9 @@ export const features = [
   },
 ];
 export default function Features() {
-  const [stan, setStan] = useState(features[0]);
-  const ActiveImage = stan.Image;
+  const [stan, setStan] = useState(0);
+  const activeFeature = features[stan]
+  const ActiveImage = activeFeature.Image;
   return (
     <>
       <h1 className="Features__head-title">Features</h1>
@@ -35,39 +36,39 @@ export default function Features() {
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
       </p>
-      <ul></ul>
       <div className="Features--choises">
         <button
           className="Features--bookmarking"
           onClick={() => {
-            setStan(features[0]);
+            setStan(0);
           }}
         >
-          {stan.tab}
+          {features[0].tab}
         </button>
         <button
           className="Features--searching"
           onClick={() => {
-            setStan(features[1]);
+            setStan(1);
           }}
         >
-          {stan.tab}
+          {features[1].tab}
         </button>
         <button
           className="Features--sharing"
           onClick={() => {
-            setStan(features[2]);
+            setStan(2);
           }}
         >
-          {stan.tab}
+          {features[2].tab}
         </button>
       </div>
       <div>
         <div className="Features--choices">
           <ActiveImage className="Features__Active-Image" />
           <div className="under-the-Image"></div>
-          <h3 className="tab--h1">{stan.title}</h3>
-          <p className="Features--text">{stan.text}</p>
+          <h3 className="tab--h1">{activeFeature.title}</h3>
+          <p className="Features--text">{activeFeature.text}</p>
+          <button className="Features__button">More Info</button>
         </div>
       </div>
     </>

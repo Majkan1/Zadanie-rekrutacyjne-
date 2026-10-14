@@ -4,22 +4,41 @@
   margin-top: 150px;
   padding: 0 32px;
   text-align: center;
+
+  @include desktop {
+    max-width: 604px;
+    margin: 150px auto 0;
+  }
 }
 
 .Faq__title {
   font-size: 24px;
+
+  @include desktop {
+    font-size: 32px;
+  }
 }
 
 .Faq__text {
   margin-top: 16px;
   font-size: 15px;
   line-height: 25px;
+
+  @include desktop {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .Faq__list {
   margin-top: 40px;
   border-top: 1px solid $color-line;
   text-align: left;
+
+  @include desktop {
+    margin-top: 56px;
+  }
 }
 
 .Faq__item {
@@ -38,6 +57,11 @@
   color: $color-dark;
   font-size: 15px;
   text-align: left;
+
+  @include desktop {
+    padding: 24px 0;
+    font-size: 18px;
+  }
 }
 
 .Faq__question:hover {
@@ -50,13 +74,11 @@
   transition: transform 0.2s;
 }
 
-.Faq__item--open,
-.Faq__arrow {
+.Faq__item--open .Faq__arrow {
   transform: rotate(180deg);
 }
 
-.Faq__item--open,
-.Faq__arrow path {
+.Faq__item--open .Faq__arrow path {
   stroke: $color-accent;
 }
 
@@ -67,18 +89,7 @@
 }
 
 .Faq__button {
+  @include button-primary;
   margin-top: 54px;
   padding: 14px 20px;
-  border: 2px solid $color-primary;
-  border-radius: 5px;
-  background-color: $color-primary;
-  color: $color-white;
-  font-size: 14px;
-  font-weight: $font-weight-medium;
-  box-shadow: $shadow-blue;
-}
-
-.Faq__button:hover {
-  background-color: $color-white;
-  color: $color-primary;
 }

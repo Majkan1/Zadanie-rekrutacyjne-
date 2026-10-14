@@ -4,10 +4,18 @@
   margin-top: 150px;
   padding: 0 32px;
   text-align: center;
+
+  @include desktop {
+    margin-top: 160px;
+  }
 }
 
 .Download__h1 {
   font-size: 24px;
+
+  @include desktop {
+    font-size: 32px;
+  }
 }
 
 .Download__start p {
@@ -15,6 +23,12 @@
   margin: 16px auto 0;
   font-size: 15px;
   line-height: 25px;
+
+  @include desktop {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .Download__cards {
@@ -24,6 +38,14 @@
   gap: 40px;
   margin-top: 40px;
   padding: 0 32px;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 34px;
+    margin-top: 48px;
+  }
 }
 
 .Download__card {
@@ -34,6 +56,18 @@
   background-color: $color-white;
   box-shadow: $shadow-card;
   text-align: center;
+}
+
+.Download__card:nth-child(2) {
+  @include desktop {
+    margin-top: 40px;
+  }
+}
+
+.Download__card:nth-child(3) {
+  @include desktop {
+    margin-top: 80px;
+  }
 }
 
 .Download__logo {
@@ -56,19 +90,8 @@
 }
 
 .Download__button {
+  @include button-primary;
   width: calc(100% - 48px);
   margin-top: 24px;
   padding: 14px 0;
-  border: 2px solid $color-primary;
-  border-radius: 5px;
-  background-color: $color-primary;
-  color: $color-white;
-  font-size: 14px;
-  font-weight: $font-weight-medium;
-  box-shadow: $shadow-blue;
-}
-
-.Download__button:hover {
-  background-color: $color-white;
-  color: $color-primary;
 }
