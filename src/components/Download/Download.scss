@@ -1,23 +1,23 @@
 @use '../../styles/abstracts' as *;
 
-.Download__start{
+.Download__start {
   margin-top: 150px;
   padding: 0 32px;
   text-align: center;
 }
 
-.Download__h1{
+.Download__h1 {
   font-size: 24px;
 }
 
-.Download__start p{
+.Download__start p {
   max-width: 540px;
   margin: 16px auto 0;
   font-size: 15px;
   line-height: 25px;
 }
 
-.Download__cards{
+.Download__cards {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,7 @@
   padding: 0 32px;
 }
 
-.Download__card{
+.Download__card {
   width: 100%;
   max-width: 280px;
   padding: 48px 0 24px;
@@ -36,17 +36,17 @@
   text-align: center;
 }
 
-.Download__logo{
+.Download__logo {
   height: 100px;
   margin: 0 auto;
 }
 
-.Download__title{
+.Download__title {
   margin-top: 32px;
   font-size: 20px;
 }
 
-.Download__version{
+.Download__version {
   margin-top: 8px;
   padding-bottom: 32px;
   border-bottom: 4px dotted $color-line;
@@ -55,7 +55,7 @@
   font-weight: $font-weight-regular;
 }
 
-.Download__button{
+.Download__button {
   width: calc(100% - 48px);
   margin-top: 24px;
   padding: 14px 0;
@@ -68,7 +68,7 @@
   box-shadow: $shadow-blue;
 }
 
-.Download__button:hover{
+.Download__button:hover {
   background-color: $color-white;
   color: $color-primary;
 }

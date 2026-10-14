@@ -1,8 +1,8 @@
-import './Features.scss'
+import './Features.scss';
 import Tab1 from '../../images/illustration-features-tab-1.svg';
 import Tab2 from '../../images/illustration-features-tab-2.svg';
 import Tab3 from '../../images/illustration-features-tab-3.svg';
-import { useState } from 'react'
+import { useState } from 'react';
 
 export const features = [
   {
@@ -24,30 +24,52 @@ export const features = [
     Image: Tab3,
   },
 ];
-export default function Features(){
-  const [stan,setStan] = useState(features[0]);
+export default function Features() {
+  const [stan, setStan] = useState(features[0]);
   const ActiveImage = stan.Image;
-  return(
+  return (
     <>
-      <h1 className='Features__head-title'>Features</h1>
-      <p className='Features__p'>Our aim is to make it quick and easy for you
-        to access your favourite websites. Your bookmarks
-        sync between your devices so you can access them on the go.
+      <h1 className="Features__head-title">Features</h1>
+      <p className="Features__p">
+        Our aim is to make it quick and easy for you to access your favourite
+        websites. Your bookmarks sync between your devices so you can access
+        them on the go.
       </p>
-        <ul></ul>
-        <div className='Features--choises'>
-          <button className='Features--bookmarking' onClick={()=>{setStan(features[0])}}>{stan.tab}</button>
-          <button className='Features--searching' onClick={()=>{setStan(features[1])}}>{stan.tab}</button>
-          <button className='Features--sharing' onClick={()=>{setStan(features[2])}}>{stan.tab}</button>
+      <ul></ul>
+      <div className="Features--choises">
+        <button
+          className="Features--bookmarking"
+          onClick={() => {
+            setStan(features[0]);
+          }}
+        >
+          {stan.tab}
+        </button>
+        <button
+          className="Features--searching"
+          onClick={() => {
+            setStan(features[1]);
+          }}
+        >
+          {stan.tab}
+        </button>
+        <button
+          className="Features--sharing"
+          onClick={() => {
+            setStan(features[2]);
+          }}
+        >
+          {stan.tab}
+        </button>
+      </div>
+      <div>
+        <div className="Features--choices">
+          <ActiveImage className="Features__Active-Image" />
+          <div className="under-the-Image"></div>
+          <h3 className="tab--h1">{stan.title}</h3>
+          <p className="Features--text">{stan.text}</p>
         </div>
-        <div>
-          <div className='Features--choices'>
-            <ActiveImage className="Features__Active-Image"/>
-            <div className='under-the-Image'></div>
-            <h3 className='tab--h1'>{stan.title}</h3>
-            <p className='Features--text'>{stan.text}</p>
-          </div>
-        </div>
+      </div>
     </>
-  )
+  );
 }
