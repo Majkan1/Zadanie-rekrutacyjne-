@@ -6,6 +6,12 @@
   width: 311px;
   margin: 60px auto 0;
   z-index: 1;
+
+  @include desktop {
+    grid-area: image;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .blue {
@@ -17,10 +23,40 @@
   border-bottom-left-radius: 100px;
   top: 40px;
   z-index: 0;
+
+  @include desktop {
+    position: relative;
+    top: auto;
+    grid-area: image;
+    justify-self: end;
+    align-self: end;
+    width: calc(70% + 40px);
+    height: 75%;
+    margin-right: -40px;
+    margin-bottom: -40px;
+    border-bottom-left-radius: 250px;
+  }
 }
 
 .container {
   position: relative;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: minmax(0, 540px) minmax(0, 657px);
+    grid-template-rows: 1fr auto auto auto 1fr;
+    grid-template-areas:
+      '. image'
+      'title image'
+      'text image'
+      'buttons image'
+      '. image';
+    justify-content: space-between;
+    column-gap: 40px;
+    margin-top: 80px;
+    padding-left: max(32px, calc((100% - 1110px) / 2));
+    padding-right: 40px;
+  }
 }
 
 .h1 {
@@ -29,6 +65,15 @@
   padding: 0 32px;
   font-size: 30px;
   line-height: 40px;
+
+  @include desktop {
+    grid-area: title;
+    margin-top: 0;
+    padding: 0;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: left;
+  }
 }
 
 .text {
@@ -37,6 +82,19 @@
   font-size: 15px;
   margin-top: 16px;
   padding: 0 32px;
+
+  @include desktop {
+    grid-area: text;
+    margin-top: 24px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .buttons {
@@ -44,6 +102,13 @@
   justify-content: center;
   padding: 32px 32px 0;
   gap: 14px;
+
+  @include desktop {
+    grid-area: buttons;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 32px 0 0;
+  }
 }
 
 .button--chrome,
@@ -51,11 +116,18 @@
   flex: 1;
   max-width: 160px;
   padding: 15px 5px;
-  border: none;
+  border: 2px solid transparent;
+  transition: 0.2s;
   border-radius: 5px;
   font-size: 14px;
   font-weight: $font-weight-medium;
   box-shadow: $shadow-blue;
+
+  @include desktop {
+    flex: none;
+    max-width: none;
+    padding: 13px 22px;
+  }
 }
 
 .button--chrome {
@@ -66,4 +138,15 @@
 .button--firefox {
   background-color: $color-light;
   color: $color-dark;
+}
+
+.button--chrome:hover {
+  border-color: $color-primary;
+  background-color: $color-white;
+  color: $color-primary;
+}
+
+.button--firefox:hover {
+  border-color: $color-dark;
+  background-color: $color-white;
 }
