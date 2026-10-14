@@ -5,6 +5,7 @@ import Download from './components/Download/Download';
 import Faq from './components/Faq/Faq';
 import Newsletter from './components/Newsletter/Newsletter';
 import Footer from './components/Footer/Footer';
+import Modal from './components/Modal/Modal';
 export default function App() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function App() {
         <Newsletter />
       </main>
       <Footer />
+      <Modal/>
     </>
   );
 }
