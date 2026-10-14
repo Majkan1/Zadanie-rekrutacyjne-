@@ -1,19 +1,19 @@
 @use '../../styles/abstracts' as *;
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 32px;
-    margin-top: 40px;
-    margin-bottom:30px;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
-.hamburger{
-    width:18px;
-    height:auto;
+.hamburger {
+  width: 18px;
+  height: auto;
 }
 
-.logo{
-    width:148px;
+.logo {
+  width: 148px;
 }

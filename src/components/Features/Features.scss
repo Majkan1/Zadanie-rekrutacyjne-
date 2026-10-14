@@ -1,11 +1,11 @@
 @use '../../styles/abstracts' as *;
 
-.Features__head-title{
+.Features__head-title {
   margin-top: 140px;
   font-size: 24px;
 }
 
-.Features__p{
+.Features__p {
   text-align: center;
   line-height: 25px;
   font-size: 15px;
@@ -13,7 +13,7 @@
   padding: 0 32px;
 }
 
-.Features--choises{
+.Features--choises {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -24,63 +24,63 @@
 
 .Features--bookmarking,
 .Features--searching,
-.Features--sharing{
+.Features--sharing {
   background-color: white;
-  border:none;
+  border: none;
   border-top: 1px solid $color-line;
-  color:$color-text-muted;
+  color: $color-text-muted;
   font-size: 16px;
 }
 
-.Features--sharing{
+.Features--sharing {
   border-bottom: 1px solid $color-line;
 }
 
 .Features--bookmarking:focus,
 .Features--searching:focus,
-.Features--sharing:focus{
+.Features--sharing:focus {
   color: $color-dark;
   border-bottom: 4px solid $color-accent;
 }
 
 .Features__head-title,
 .tab--h1,
-.Features--text{
+.Features--text {
   text-align: center;
 }
 
-.Features--choices{
+.Features--choices {
   margin-top: 60px;
   position: relative;
 }
 
-.tab--h1{
-  margin-top:96px;
-  margin-bottom:20px;
+.tab--h1 {
+  margin-top: 96px;
+  margin-bottom: 20px;
   font-size: 24px;
 }
 
-.Features--text{
+.Features--text {
   padding: 0 32px;
   font-size: 15px;
   line-height: 25px;
 }
 
-.under-the-Image{
-    position: absolute;
-    width: 78%;
-    height: 206px;
-    background-color: $color-primary;
-    left:0;
-    border-bottom-right-radius: 100px;
-    top: 35px;
-    z-index: 0;
+.under-the-Image {
+  position: absolute;
+  width: 78%;
+  height: 206px;
+  background-color: $color-primary;
+  left: 0;
+  border-bottom-right-radius: 100px;
+  top: 35px;
+  z-index: 0;
 }
 
-.Features__Active-Image{
+.Features__Active-Image {
   position: relative;
   display: block;
   width: 311px;
   margin: 0 auto;
-  z-index:1;
+  z-index: 1;
 }
